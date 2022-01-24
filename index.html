@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+<meta name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <meta name="author" content="John Doe">
+
+
+
+
+
+<title>Hexo</title>
+
+
+
+    <link rel="icon" href="/favicon.ico">
+
+
+
+
+    <!-- stylesheets list from _config.yml -->
+    
+    <link rel="stylesheet" href="/css/style.css">
+    
+
+
+
+    <!-- scripts list from _config.yml -->
+    
+    <script src="/js/script.js"></script>
+    
+    <script src="/js/tocbot.min.js"></script>
+    
+
+
+
+    
+    
+        
+    
+
+
+<meta name="generator" content="Hexo 5.4.0"></head>
+
+<body>
+    <script>
+        // this function is used to check current theme before page loaded.
+        (() => {
+            const currentTheme = window.localStorage && window.localStorage.getItem('theme') || '';
+            const isDark = currentTheme === 'dark';
+            const pagebody = document.getElementsByTagName('body')[0]
+            if (isDark) {
+                pagebody.classList.add('dark-theme');
+                // mobile
+                document.getElementById("mobile-toggle-theme").innerText = "· Dark"
+            } else {
+                pagebody.classList.remove('dark-theme');
+                // mobile
+                document.getElementById("mobile-toggle-theme").innerText = "· Light"
+            }
+        })();
+    </script>
+
+    <div class="wrapper">
+        <header>
+    <nav class="navbar">
+        <div class="container">
+            <div class="navbar-header header-logo"><a href="/">Pengyuan&#39;s Website</a></div>
+            <div class="menu navbar-right">
+                
+                    <a class="menu-item" href="/archives">Posts</a>
+                
+                <input id="switch_default" type="checkbox" class="switch_default">
+                <label for="switch_default" class="toggleBtn"></label>
+            </div>
+        </div>
+    </nav>
+
+    
+    <nav class="navbar-mobile" id="nav-mobile">
+        <div class="container">
+            <div class="navbar-header">
+                <div>
+                    <a href="/">Pengyuan&#39;s Website</a><a id="mobile-toggle-theme">·&nbsp;Light</a>
+                </div>
+                <div class="menu-toggle" onclick="mobileBtn()">&#9776; Menu</div>
+            </div>
+            <div class="menu" id="mobile-menu">
+                
+                    <a class="menu-item" href="/archives">Posts</a>
+                
+            </div>
+        </div>
+    </nav>
+
+</header>
+<script>
+    var mobileBtn = function f() {
+        var toggleMenu = document.getElementsByClassName("menu-toggle")[0];
+        var mobileMenu = document.getElementById("mobile-menu");
+        if(toggleMenu.classList.contains("active")){
+           toggleMenu.classList.remove("active")
+            mobileMenu.classList.remove("active")
+        }else{
+            toggleMenu.classList.add("active")
+            mobileMenu.classList.add("active")
+        }
+    }
+</script>
+            <div class="main">
+                
+    <div class="container">
+    <div class="intro">
+        
+        <div class="info">
+            <div class="info_left">
+                <div class="avatar">
+                    <a href="/archives"><img src="/image/me.jpg"></a>
+                </div>
+                <div class="nickname"> Pengyuan Wang </div>
+            </div>
+            <div class="info_right"> <p><strong>Position:</strong> PhD Candidate <br>  <strong>Office:</strong> <br> Chair for Computer Aided Medical Procedures &amp; Augmented Reality <br> Fakultät für Informatik <br> Technische Universität München <br> Boltzmannstr. 3 <br> 85748 Garching bei München <br> MI.03.13.040 <br> <strong>Email:</strong> <a href="mailto:&#x70;&#x65;&#110;&#x67;&#x79;&#x75;&#97;&#x6e;&#46;&#119;&#x61;&#110;&#103;&#64;&#x74;&#117;&#109;&#x2e;&#x64;&#x65;">&#x70;&#x65;&#110;&#x67;&#x79;&#x75;&#97;&#x6e;&#46;&#119;&#x61;&#110;&#103;&#64;&#x74;&#117;&#109;&#x2e;&#x64;&#x65;</a></p>
+ </div>
+        </div>
+
+        <div class="showcase"> <p> <strong> Research Interest: </strong> <br> I am a PhD student at TUM CAMP working on 6D pose estimation of object for robotic applications. We have been working closely with our industry partners on cutting edge problems dealing with large amounts of objects. </p>
+ </div>
+
+        <div class="show">
+                <div class="thesis"> <p><strong>Student Thesis: </strong> <br>  Available: <a target="_blank" rel="noopener" href="http://localhost:4000/2021/12/21/Learning_without_forgetting/">6D Pose Estimation without Forgetting</a>  <br> Finished:  Deep Synthetic Polarimetric 6D Object Pose Estimation (Master Thesis,21SS) <br> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  Light Source Estimation for Photorealistic Object Rendering (Guided Research,21SS) <br></p>
+ </div>
+                <div class="news"> <p><strong>News: </strong> <br> 2 Submisssions to CVPR 2022 <br> 1 Paper accepted to IROS 2021 <br></p>
+ </div>
+                <div class="project"> <p><strong>Projects: </strong> <br> <strong> <div align='center'> <font size='4'> DemoGrasp: Few-Shot Learning for Robotic Grasping with Human Demonstration </font></div></strong>  Current 6D pose estimation networks support only a limited number of objects and require much training with either synthetic or real annotations,  which is not suitable for robotic grasping in changing indoor environments. Therefore, we propose a method to estimate object shape along with grasp points on the fly with a sequence of RGB-D images. The learned knowledge is then leveraged to guide the robot to detect and grasp the object in the real environment. We conducted exhaustive experiments in both synthetic and real environments and our method outperforms SOTA grasping networks. </p>
+ </div>
+                <div style="text-align: center; margin-top: -15px;">
+                <img src="/image/teaser_grasp.png" width="500" height="300">
+                </div>
+                <div class="teaching"> <p><strong>Teachings: </strong> <br> Project Course: 3D Computer Vision (WS 21/22) <br> Seminar Course: Recent Trends in 3D Computer Vision and Deep Learning (SS 2021)</p>
+ </div>
+                <div class="publication"> <p><strong> List of Publications: </strong> <br > DemoGrasp: Few-Shot Learning for Robotic Grasping with Human Demonstration. </strong> P. Wang *, F. Manhardt *, L. Minciullo,  L. Garattoni, S. Meier, N. Navab. and Busam, B. IROS 2021. * Equal Contribution<br></p>
+ </div>
+        </div>
+
+
+        <div class="links">
+            
+                
+                    <a class="link-item" title="Github" target="_blank" rel="noopener" href="https://github.com/Seasandwpy">
+                        
+                        
+                            <i class="iconfont icon-github"></i>
+                        
+                    </a>
+                
+            
+        </div>
+    </div>
+</div>
+
+
+            </div>
+            <footer id="footer" class="footer">
+    <div class="copyright">
+        <span>© John Doe | Powered by <a href="https://hexo.io" target="_blank">Hexo</a> & <a href="https://github.com/Siricee/hexo-theme-Chic" target="_blank">Chic</a></span>
+    </div>
+</footer>
+
+    </div>
+</body>
+
+</html>
