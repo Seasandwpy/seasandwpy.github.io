@@ -1,2 +1,3 @@
-[submodule "https://github.com/gnoluna/hexo-theme-Chic-academic.git"]
-	url = themes/academic-chic
+[submodule "themes/academic-chic"]
+	path = themes/academic-chic
+	url = https://github.com/gnoluna/hexo-theme-Chic-academic.git
