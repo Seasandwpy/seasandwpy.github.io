@@ -1,183 +1,364 @@
-<!DOCTYPE html>
+<!DOCTYPE HTML>
 <html lang="en">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 
-<head>
-    <meta charset="UTF-8">
-<meta name="viewport"
-      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-<meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Jon Barron</title>
 
-    <meta name="author" content="John Doe">
-
-
-
-
-
-<title>Hexo</title>
-
-
-
-    <link rel="icon" href="/favicon.ico">
-
-
-
-
-    <!-- stylesheets list from _config.yml -->
+    <meta name="author" content="Jon Barron">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="shortcut icon" href="images/favicon/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" type="text/css" href="stylesheet.css">
     
-    <link rel="stylesheet" href="/css/style.css">
-    
+  </head>
 
+  <body>
+    <table style="width:100%;max-width:800px;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
+      <tr style="padding:0px">
+        <td style="padding:0px">
+          <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
+            <tr style="padding:0px">
+              <td style="padding:2.5%;width:63%;vertical-align:middle">
+                <p class="name" style="text-align: center;">
+                  Pengyuan Wang
+                </p>
+                <p>I am a PhD student at <a href="https://www.cs.cit.tum.de/camp/research/computer-vision/">TUM CAMP computer vision group</a> supervised by <a href="https://www.professoren.tum.de/en/navab-nassir"> Prof. Dr. Nassir Navab</a>. My research focuses on object pose estimations and robotic manipulations.
+                </p>
+                <p style="text-align:center">
+                  <a href="pengyuan.wang@tum.de">Email</a> &nbsp;/&nbsp;
+                  <a href="https://scholar.google.com/citations?user=JrPjwOsAAAAJ">Scholar</a> &nbsp;/&nbsp;
+                  <a href="https://www.linkedin.com/in/pengyuanwang93/">Linkedin</a> &nbsp;/&nbsp;
+                  <a href="https://github.com/Seasandwpy">Github</a>
+                </p>
+              </td>
+              <td style="padding:2.5%;width:40%;max-width:40%">
+                <a href="images/pengyuan.jpg"><img style="width:100%;max-width:100%;object-fit: cover; border-radius: 50%;" alt="profile photo" src="images/pengyuan.jpg" class="hoverZoomLink"></a>
+              </td>
+            </tr>
+          </tbody></table>
+          <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
+              <tr>
+              <td style="padding:20px;width:100%;vertical-align:middle">
+                <h2>Research</h2>
+                <p>
+                 My research interest is in the pose estimation of category-level objects and novel objects, which is important for robotic applications. Also
+                  I am interested in vision-language-action models for generic robotic manipulations.
+                </p>
+              </td>
+            </tr>
+          </tbody></table>
+          <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
 
-
-    <!-- scripts list from _config.yml -->
-    
-    <script src="/js/script.js"></script>
-    
-    <script src="/js/tocbot.min.js"></script>
-    
-
-
-
-    
-    
-        
-    
-
-
-<meta name="generator" content="Hexo 5.4.0"></head>
-
-<body>
-    <script>
-        // this function is used to check current theme before page loaded.
-        (() => {
-            const currentTheme = window.localStorage && window.localStorage.getItem('theme') || '';
-            const isDark = currentTheme === 'dark';
-            const pagebody = document.getElementsByTagName('body')[0]
-            if (isDark) {
-                pagebody.classList.add('dark-theme');
-                // mobile
-                document.getElementById("mobile-toggle-theme").innerText = "· Dark"
-            } else {
-                pagebody.classList.remove('dark-theme');
-                // mobile
-                document.getElementById("mobile-toggle-theme").innerText = "· Light"
-            }
-        })();
-    </script>
-
-    <div class="wrapper">
-        <header>
-    <nav class="navbar">
-        <div class="container">
-            <div class="navbar-header header-logo"><a href="/">Pengyuan&#39;s Website</a></div>
-            <div class="menu navbar-right">
-                
-                    <a class="menu-item" href="/archives">Posts</a>
-                
-                <input id="switch_default" type="checkbox" class="switch_default">
-                <label for="switch_default" class="toggleBtn"></label>
-            </div>
+    <!-- gspose -->
+    <tr onmouseout="nuvo_stop()" onmouseover="nuvo_start()">
+      <td style="padding:20px;width:25%;vertical-align:middle">
+        <div class="one">
+          <img src='images/gspose.svg' width=120% >
         </div>
-    </nav>
+        <script type="text/javascript">
+          function nuvo_start() {
+            document.getElementById('nuvo_image').style.opacity = "1";
+          }
+          function nuvo_stop() {
+            document.getElementById('nuvo_image').style.opacity = "0";
+          }
+          nuvo_stop()
+        </script>
+      </td>
+      <td style="padding:20px;width:75%;vertical-align:middle">
+        <a href="">
+          <span class="papertitle">GS-Pose: Category-Level Object Pose Estimation via Geometric and Semantic Correspondence</span>
+        </a>
+        <br>
+        <strong>Pengyuan Wang</strong>,
+        <a href="https://scholar.google.co.jp/citations?user=HS4dPGQAAAAJ">Takuya Ikeda</a>,
+        <a href="https://scholar.google.com.au/citations?user=1Vqlm0kAAAAJ">Robert Lee</a>,
+        <a href="https://scholar.google.com/citations?user=oC2CnhUAAAAJ">Koichi Nishiwaki</a>
+        <br>
+        <em>ECCV</em>, 2024
+        <br>
+        <a href="">project page</a>
+        /
+        <a href="">video</a>
+        /
+        <a href="https://arxiv.org/abs/2311.13777">arXiv</a>
+        <p></p>
+        <p>
+            GS-Pose enables training category-level object pose estimations from <strong> only a few synthetic CAD models </strong>, and achieves comparable
+          results with baselines trained on real pose dataset.
+        </p>
+      </td>
+    </tr>
 
-    
-    <nav class="navbar-mobile" id="nav-mobile">
-        <div class="container">
-            <div class="navbar-header">
-                <div>
-                    <a href="/">Pengyuan&#39;s Website</a><a id="mobile-toggle-theme">·&nbsp;Light</a>
-                </div>
-                <div class="menu-toggle" onclick="mobileBtn()">&#9776; Menu</div>
-            </div>
-            <div class="menu" id="mobile-menu">
-                
-                    <a class="menu-item" href="/archives">Posts</a>
-                
-            </div>
+    <!-- housecat6d -->
+    <tr onmouseout="nuvo_stop()" onmouseover="nuvo_start()">
+      <td style="padding:20px;width:25%;vertical-align:middle">
+        <div class="one">
+          <img src='images/housecat6d.png' width=120% >
         </div>
-    </nav>
+      </td>
+      <td style="padding:20px;width:75%;vertical-align:middle">
+        <a href="">
+          <span class="papertitle">HouseCat6D - A Large-Scale Multi-Modal Category Level 6D Object Perception
+Dataset with Household Objects in Realistic Scenarios</span>
+        </a>
+        <br>
+          <a>HyunJun Jung</a>,
+          <a>Shun-Cheng Wu</a>,
+          <a>Patrick Ruhkamp</a>,
+          <a>Guangyao Zhai</a>,
+          <a>Hannah Schieber</a>,
+          <a>Giulia Rizzoli</a>,
+        <strong>Pengyuan Wang</strong>,
+        <a>Hongcheng Zhao</a>,
+          <a>Lorenzo Garattoni</a>,
+        <a>Sven Meier</a>,
+          <a>Daniel Roth</a>,
+            <a>Nassir Navab</a>,
+          <a>Benjamin Busam</a>,
+        <br>
+          <em>  CVPR  </em>, 2024 &nbsp <font color="red"><strong>(Highlight)</strong></font>
+        <br>
+        <a href="https://sites.google.com/view/housecat6d">project page</a>
+        /
+          <a href="https://sites.google.com/view/housecat6d/dataset?authuser=0">dataset</a>
+          /
+        <a href="https://arxiv.org/abs/2212.10428">arXiv</a>
+        <p></p>
+        <p>
+        A large-scale category-level pose dataset with accurate ground truth pose annotations. The dataset features
+            photometrically-challenging categories including transparent and metallic objects, and more diverse object poses in
+            the real scenes. Feel free to test your pose estimation methods on our benchmark.
+        </p>
+      </td>
+    </tr>
 
-</header>
-<script>
-    var mobileBtn = function f() {
-        var toggleMenu = document.getElementsByClassName("menu-toggle")[0];
-        var mobileMenu = document.getElementById("mobile-menu");
-        if(toggleMenu.classList.contains("active")){
-           toggleMenu.classList.remove("active")
-            mobileMenu.classList.remove("active")
-        }else{
-            toggleMenu.classList.add("active")
-            mobileMenu.classList.add("active")
-        }
-    }
-</script>
-            <div class="main">
-                
-    <div class="container">
-    <div class="intro">
-        
-        <div class="info">
-            <div class="info_left">
-                <div class="avatar">
-                    <a href="/archives"><img src="/image/me.jpg"></a>
-                </div>
-                <div class="nickname"> Pengyuan Wang </div>
-            </div>
-            <div class="info_right"> <p><strong>Position:</strong> PhD Candidate <br>  <strong>Office:</strong> <br> Chair for Computer Aided Medical Procedures &amp; Augmented Reality <br> Fakultät für Informatik <br> Technische Universität München <br> Boltzmannstr. 3 <br> 85748 Garching bei München <br> MI.03.13.040 <br> <strong>Email:</strong> <a href="mailto:&#112;&#101;&#x6e;&#x67;&#121;&#x75;&#x61;&#110;&#x2e;&#119;&#x61;&#x6e;&#103;&#x40;&#x74;&#x75;&#x6d;&#x2e;&#100;&#x65;">&#112;&#101;&#x6e;&#x67;&#121;&#x75;&#x61;&#110;&#x2e;&#119;&#x61;&#x6e;&#103;&#x40;&#x74;&#x75;&#x6d;&#x2e;&#100;&#x65;</a></p>
- </div>
+
+    <!-- transparent pose -->
+    <tr onmouseout="nuvo_stop()" onmouseover="nuvo_start()">
+      <td style="padding:20px;width:25%;vertical-align:middle">
+        <div class="one">
+          <img src='images/glass9d.png' width=120% >
         </div>
+      </td>
+      <td style="padding:20px;width:75%;vertical-align:middle">
+        <a href="">
+          <span class="papertitle">Improving Self-Supervised Learning of Transparent Category Poses
+          with Language Guidance and Implicit Physical Constraints</span>
+        </a>
+        <br>
+        <strong>Pengyuan Wang</strong>,
+        <a href="https://iridia.ulb.ac.be/~lgarattoni/index.html">Lorenzo Garattoni</a>,
+        <a href="">Sven Meier</a>,
+        <a href="https://www.professoren.tum.de/en/navab-nassir">Nassir Navab</a>
+        <a href="https://www.cs.cit.tum.de/camp/members/benjamin-busam/">Benjamin Busam</a>
+        <br>
+        <em>Arxiv</em>, 2024
+        <br>
+        <a href="">arXiv</a>
+        <p></p>
+        <p>
+          We propose novel <strong>self-supervision losses</strong> to self-supervise the
+          category-level pose estimations for <strong>transparent objects</strong>. Only RGB-D with polarization
+        images and no real pose annotations are needed in the  self-supervision stage.
+        </p>
+      </td>
+    </tr>
 
-        <div class="showcase"> <p> <strong> Research Interest: </strong> <br> I am a PhD student at TUM CAMP working on 6D pose estimation of object for robotic applications. We have been working closely with our industry partners on cutting edge problems dealing with large amounts of objects. Feel free to contact me if you are instered in object pose estimation and have experience in 3D computer vision.</p>
- </div>
-
-        <div class="show">
-                <div class="thesis"> <p><strong>Student Thesis: </strong> <br>  Available: 6D Pose Estimation without Forgetting  (Guided Research) <a target="_blank" rel="noopener" href="https://seasandwpy.github.io/2021/12/21/Learning_without_forgetting/"><strong>Link</strong></a> <br> Running:  Mutliview Hand Pose Estimation under Occlusion  <a target="_blank" rel="noopener" href="https://seasandwpy.github.io/2022/03/15/mutliview-hand-pose-estimation-under-occlusion/"><strong>Link</strong></a> <br> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  Few Shot Learning for 6D Object Pose Estimation <a target="_blank" rel="noopener" href="https://seasandwpy.github.io/2022/03/15/few-shot-learning-for-categorial-objects/"><strong>Link</strong></a>  <br> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  Self-Supervision for Transparent Category-level Pose Estimation <a target="_blank" rel="noopener" href="https://seasandwpy.github.io/2022/03/15/self-supervision-transparent/"><strong>Link</strong></a>  <br>   Finished:  Deep Synthetic Polarimetric 6D Object Pose Estimation (Master Thesis,21SS) <br> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  Light Source Estimation for Photorealistic Object Rendering (Guided Research,21SS) <br></p>
- </div>
-                <div class="news"> <p><strong>News: </strong> <br> 1 Submission accepted to ECCV 2022 <br> 1 Submission accepted to CVPR 2022 <br> 1 Paper accepted to IROS 2021 <br></p>
- </div>
-                <div class="project1"> <p><strong>Projects: </strong> <br> <strong> <div align='center'> <font size='4'> PhoCaL: A 6D Pose Multi-Modal Dataset with Photometrically Challenging Objects  </font></div></strong>  Object pose estimation is crucial for robotic applications and augmented reality. To provide a benchmark with high-quality ground truth  annotations to the community, we introduce a multimodal dataset for category-level object pose estimation with photometrically challenging objects termed PhoCaL.  PhoCaL comprises 60 high quality 3D models of household objects over 8 categories including highly reflective, transparent and symmetric objects.  We developed a novel robot-supported multi-modal (RGB, depth, polarisation) data acquisition and annotation process. It ensures sub-millimeter accuracy  of the pose for opaque textured, shiny and transparent objects, no motion blur and perfect camera synchronisation. <a target="_blank" rel="noopener" href="https://www.campar.in.tum.de/public_datasets/2022_cvpr_wang/"><strong> <font size='4' color='red'> PhoCAL Dataset Download [Link] </font></strong></a> </p>
- 
-                <div style="text-align: center; margin-top: -15px;">
-                <img src="/image/PhoCAL_teaser.PNG" width="800" height="200"> 
-                </div>
-                </div>
-                <div class="project2"> <p><strong> <div align='center'> <font size='4'> DemoGrasp: Few-Shot Learning for Robotic Grasping with Human Demonstration </font></div></strong>  Current 6D pose estimation networks support only a limited number of objects and require much training with either synthetic or real annotations,  which is not suitable for robotic grasping in changing indoor environments. Therefore, we propose a method to estimate object shape along with grasp points on the fly with a sequence of RGB-D images. The learned knowledge is then leveraged to guide the robot to detect and grasp the object in the real environment. We conducted exhaustive experiments in both synthetic and real environments and our method outperforms SOTA grasping networks. </p>
-
-                <div style="text-align: center; margin-top: -15px;">
-                <img src="/image/teaser_grasp.png" width="500" height="300">
-                </div>
-                </div>
-                <div class="teaching"> <p><strong>Teachings: </strong> <br> Project Couse: Advanced Topics in 3D Computer Vision (SS 2022) <br> Project Course: Praktikum on 3D Computer Vision (WS 2021/22) <br> Seminar Course: Recent Trends in 3D Computer Vision and Deep Learning (SS 2021)</p>
- </div>
-                <div class="publication"> <p><strong> List of Publications: </strong> <br > <strong>Polarimetric Pose Prediction</strong>, D. Gao, Y. Li, P. Ruhkamp, I. Skobleva, Ma. Wysock, H. Jung, <strong>P. Wang</strong>, A. Guridi, B. Busam, ECCV, 2022. <br> <strong>PhoCaL: A Multi-Modal Dataset for Category-Level Object Pose Estimation with Photometrically Challenging Objects</strong>,  <strong> P. Wang </strong> *, H. Jung *, Y. Li, S. Shen, R. Srikanth, L. Garattoni, S. Meier, N. Navab, B. Busam, CVPR, 2022. * Equal Contribution <br> <strong>DemoGrasp: Few-Shot Learning for Robotic Grasping with Human Demonstration</strong>. </strong> <strong>P. Wang</strong> *, F. Manhardt *, L. Minciullo,  L. Garattoni, S. Meier, N. Navab. and B. Busam. IROS 2021. * Equal Contribution<br></p>
- </div>
+    <!-- ccd3dr -->
+    <tr onmouseout="nuvo_stop()" onmouseover="nuvo_start()">
+      <td style="padding:20px;width:25%;vertical-align:middle">
+        <div class="one">
+          <img src='images/ccd3dr.png' width=120% >
         </div>
+      </td>
+      <td style="padding:20px;width:75%;vertical-align:middle">
+        <a href="">
+          <span class="papertitle">CCD-3DR: Consistent Conditioning in Diffusion for Single-Image 3D
+            Reconstruction</span>
+        </a>
+        <br>
+          <a> Yan Di </a>,
+          <a>Chenyangguang Zhang</a>,
+        <strong>Pengyuan Wang</strong>,
+          <a> Guangyao Zhai</a>,
+          <a> Ruida Zhang </a>,
+          <a> Fabian Manhardt </a>,
+          <a href="https://www.cs.cit.tum.de/camp/members/benjamin-busam/">Benjamin Busam</a>,
+          <a>Xiangyang Ji</a>,
+        <a > Federico Tombari </a>
+        <br>
+        <em>Arxiv</em>, 2023
+        <br>
+        <a href="https://arxiv.org/abs/2308.07837">arXiv</a>
+        <p></p>
+        <p>
+        CCD-3DR works on generative networks imagining object point clouds from a single RGB
+        image. Accurate point clouds are generated by diffusion networks with consistent object center conditioning.
+        </p>
+      </td>
+    </tr>
 
-
-        <div class="links">
-            
-                
-                    <a class="link-item" title="Github" target="_blank" rel="noopener" href="https://github.com/Seasandwpy">
-                        
-                        
-                            <i class="iconfont icon-github"></i>
-                        
-                    </a>
-                
-            
+    <!-- crocps -->
+    <tr onmouseout="nuvo_stop()" onmouseover="nuvo_start()">
+      <td style="padding:20px;width:25%;vertical-align:middle">
+        <div class="one">
+          <img src='images/crocps.png' width=120% >
         </div>
-    </div>
-</div>
+      </td>
+      <td style="padding:20px;width:75%;vertical-align:middle">
+        <a href="">
+          <span class="papertitle">CroCPS: Addressing Photometric Challenges in Self-Supervised
+        Category-Level 6D Object Poses with Cross-Modal Learning</span>
+        </a>
+        <br>
+          <strong>Pengyuan Wang</strong>,
+        <a href="https://iridia.ulb.ac.be/~lgarattoni/index.html">Lorenzo Garattoni</a>,
+        <a href="">Sven Meier</a>,
+        <a href="https://www.professoren.tum.de/en/navab-nassir">Nassir Navab</a>,
+        <a href="https://www.cs.cit.tum.de/camp/members/benjamin-busam/">Benjamin Busam</a>
+        <br>
+        <em>BMVC</em>, 2022
+        <br>
+        <a href="https://arxiv.org/abs/2308.07837">paper</a>
+        <p></p>
+        <p>
+        How to estimate the object pose of metallic objects from RGB-D inputs in presence of depth artifacts?
+          CroCPS proposes a multi-modal approach to improve pose estimation accuracy in real scenes for metallic category.
+        </p>
+      </td>
+    </tr>
 
 
-            </div>
-            <footer id="footer" class="footer">
-    <div class="copyright">
-        <span>© John Doe | Powered by <a href="https://hexo.io" target="_blank">Hexo</a> & <a href="https://github.com/Siricee/hexo-theme-Chic" target="_blank">Chic</a></span>
-    </div>
-</footer>
+    <!-- ppp -->
+    <tr onmouseout="nuvo_stop()" onmouseover="nuvo_start()">
+      <td style="padding:20px;width:25%;vertical-align:middle">
+        <div class="one">
+          <img src='images/ppp.jpg' width=100% >
+        </div>
+      </td>
+      <td style="padding:20px;width:75%;vertical-align:middle">
+        <a href="">
+          <span class="papertitle">Polarimetric Pose Prediction</span>
+        </a>
+        <br>
+        <a href="https://daoyig.github.io/">Daoyi Gao</a>,
+        <a> Yitong Li </a>,
+        <a>Patrick Ruhkamp</a>,
+        <a>Iuliia Skobleva</a>,
+        <a>Magdalena Wysock</a>,
+        <a> HyunJun Jung</a>,
+          <strong>Pengyuan Wang</strong>,
+        <a>Arturo Guridi</a>,
+        <a href="https://www.cs.cit.tum.de/camp/members/benjamin-busam/">Benjamin Busam</a>
+        <br>
+        <em>ECCV</em>, 2022
+        <br>
+        <a href="https://daoyig.github.io/PPPNet/"> project page </a>
+        /
+        <a href="https://arxiv.org/abs/2112.03810">paper</a>
+        /
+        <a href="https://github.com/DaoyiG/polarimetric-pose-prediction"> code </a>
+        <p></p>
+        <p>
+        PPP-Net proposes a hybrid model that utilizes polarizaiotn information with physical priors in a data-driven learning
+          strategy to improve the accuracy of pose predictions for photometric challenging objects.
+        </p>
+      </td>
+    </tr>
 
-    </div>
-</body>
 
+
+      <!-- phocal -->
+    <tr onmouseout="nuvo_stop()" onmouseover="nuvo_start()">
+      <td style="padding:20px;width:25%;vertical-align:middle">
+        <div class="one">
+          <img src='images/phocal.png' width=120% >
+        </div>
+      </td>
+      <td style="padding:20px;width:75%;vertical-align:middle">
+        <a href="">
+          <span class="papertitle">PhoCaL: A Multi-Modal Dataset for Category-Level Object Pose
+            Estimation with Photometrically Challenging Objects</span>
+        </a>
+        <br>
+          <strong>Pengyuan Wang</strong>*,
+        <a> HyunJun Jung</a>*,
+        <a>Yitong Li</a>,
+        <a>Siyuan Shen</a>,
+        <a>Rahul Parthasarathy Srikanth</a>,
+         <a href="https://iridia.ulb.ac.be/~lgarattoni/index.html">Lorenzo Garattoni</a>,
+        <a href="">Sven Meier</a>,
+        <a href="https://www.professoren.tum.de/en/navab-nassir">Nassir Navab</a>,
+        <a href="https://www.cs.cit.tum.de/camp/members/benjamin-busam/">Benjamin Busam</a>
+        <br>
+        <em>CVPR</em>, 2022
+        <br>
+        <a href="https://www.campar.in.tum.de/public_datasets/2022_cvpr_wang/"> project page </a>
+        /
+        <a href="https://www.campar.in.tum.de/public_datasets/2022_cvpr_wang/"> dataset </a>
+        /
+        <a href="https://arxiv.org/abs/2205.08811"> Arxiv </a>
+        <p></p>
+        <p>
+      We propose a novel method to annotate object poses accurately with
+          a robot arm, especially we design a calibration pipeline for hand-eye calibration of the cameras.
+          Our method annotates the object poses accurately, even for photometrically-challenging
+          objects such as glasses and cutlery.
+        </p>
+      </td>
+    </tr>
+
+      <!-- demograsp -->
+    <tr onmouseout="nuvo_stop()" onmouseover="nuvo_start()">
+      <td style="padding:20px;width:25%;vertical-align:middle">
+        <div class="one">
+          <img src='images/demograsp.jpg' width=120% >
+        </div>
+      </td>
+      <td style="padding:20px;width:75%;vertical-align:middle">
+        <a href="">
+          <span class="papertitle">DemoGrasp: Few-Shot Learning for Robotic Grasping
+      with Human Demonstration</span>
+        </a>
+        <br>
+          <strong>Pengyuan Wang</strong>*,
+        <a>Fabian Manhardt</a>*,
+        <a>Luca Minciullo</a>,
+         <a href="https://iridia.ulb.ac.be/~lgarattoni/index.html">Lorenzo Garattoni</a>,
+        <a href="">Sven Meier</a>,
+        <a href="https://www.professoren.tum.de/en/navab-nassir">Nassir Navab</a>,
+        <a href="https://www.cs.cit.tum.de/camp/members/benjamin-busam/">Benjamin Busam</a>
+        <br>
+        <em>IROS</em>, 2021
+        <br>
+        <a href="https://arxiv.org/abs/2112.02849"> Arxiv </a>
+        <p></p>
+        <p>
+      DemoGrasp proposes to learn robotic grasping from human demonstrations.
+          In the method we learn the grasping pose and object shape jointly in a
+          demonstration sequence. Afterwards we propose a novel object pose estimator
+          to get object poses in the real scenes as well as the grasping point.
+
+        </p>
+      </td>
+    </tr>
+
+          </tbody></table>
+
+          </tbody></table>
+          <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
+            <tr>
+              <td style="padding:0px">
+                <br>
+                <p style="text-align:right;font-size:small;">
+                  Feel free to steal this website's <a href="https://github.com/jonbarron/jonbarron_website">source code</a>. <strong>Do not</strong> scrape the HTML from this page itself, as it includes analytics tags that you do not want on your own website &mdash; use the github code instead. Also, consider using <a href="https://leonidk.com/">Leonid Keselman</a>'s <a href="https://github.com/leonidk/new_website">Jekyll fork</a> of this page.
+                </p>
+              </td>
+            </tr>
+          </tbody></table>
+        </td>
+      </tr>
+    </table>
+  </body>
 </html>
