@@ -52,7 +52,8 @@
     <div class="container" id="main">
         <div class="row">
             <h2 class="col-md-12 text-center">
-                <b>Self-Supervision for Transparent Object Poses</b>
+                <b>Improving Self-Supervised Learning of Transparent Category Poses with Language Guidance
+                    and Implicit Physical Constraints</b> <br>
                 <small>
                     RAL - 2024
                 </small>
@@ -63,15 +64,94 @@
                 <ul class="list-inline">
                     <li>
                         <a href="">
-                          Pengyuan Wang
+                            Pengyuan Wang <sup>1</sup>
+                        </a>,
+                        <a href="">
+                         Lorenzo Garattoni <sup>2</sup>
+                        </a>,
+                        <a href="">
+                        Sven Meier <sup>2</sup>
+                        </a>,
+                        <a href="">
+                      Nassir Navab <sup>1</sup>
+                        </a>,
+                     <a href="">
+                      Benjamin Busam <sup>1</sup>
                         </a>
-                        </br>TUM
+                        </br>
+                        1. Technical University of Munich
+                        2. Toyota Motor Europe
                     </li>
                 </ul>
             </div>
         </div>
 
+        <div class="row">
+                <div class="col-md-4 col-md-offset-4 text-center">
+                    <ul class="nav nav-pills nav-justified">
+                        <li>
+                            <a href="https://ieeexplore.ieee.org/abstract/document/10631304">
+                            <image src="img/ral.png" height="60px">
+                                <h4><strong>Paper</strong></h4>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="">
+                            <image src="img/images.png" height="60px">
+                                <h4><strong>Dataset</strong></h4>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+        </div>
 
+                <div class="row">
+            <div class="col-md-8 col-md-offset-2">
+                <h3>
+                    Abstract
+                </h3>
+                <center> <image style='height: 70%; width: 70%; text-align:center' src="img/intro.png"
+                                class="img-responsive" alt="overview" class="center" /> </center>   <br>
+                <p class="text-justify">
+Accurate object pose estimation is crucial for robotic applications and recent trends in category-level pose estimation show
+                    great potential for applications encountering a large variety of similar objects, often encountered in home environments.
+                    While common in such environments, photometrically challenging objects with transparency such as glasses are poorly handled
+                    by current methods. Especially using self-supervision to bridge the sim2real domain gap is difficult for transparent objects
+                    due to strong background changes and depth artifacts. To address this, we propose a novel pipeline which takes language guidance
+                    and implicit physical constraints for 2D and 3D self-supervisions. In specific, we utilize language guidance to obtain accurate
+                    2D object segmentation which is robust to background changes. Further 3D self-supervisions are achieved by contact constraint
+                    and normal constraint from polarization inputs with a differentiable renderer. Instead of explicitly leveraging the depth
+                    measurements, we reason about implicit physical constraints for self-supervisions. Extensive experiments superior performance
+                    of our self-supervision approach over baselines on both the self-collected dataset and public benchmarks,
+                    addressing photometric challenges.
+                </p>
+            </div>
+        </div>
+
+
+            <div class="row">
+            <div class="col-md-8 col-md-offset-2">
+                <h3>
+                   Method
+                </h3>
+                <center> <image style='height: 90%; width: 90%; text-align:center' src="img/teaser.png"
+                                class="img-responsive" alt="overview" class="center" /> </center>   <br>
+                <p class="text-justify">
+    Our self-supervison pipeline involves supervised training in the
+    synthetic dataset and unsupervised domain adaptations in the real scenes. For the supervised training in the synthetic dataset,
+    we firstly train a pose estimation network in section (1) and a multi-modal auxiliary network predicting implicit physical
+    constraints such as contact edges and surface normals in section (3). During unsupervised domain adaptation in the real scenes,
+    we apply an off-the-shelf language-guided detector in section (2) and freeze the auxiliary network in
+    section (3), and construct self-supervision losses following section (4). The self-supervision loss is applied to update the pose
+    estimation network weights for self-supervision of object poses and shapes. To explain in detail, we take RGB-D images as inputs
+    with an object depth prediction module followed by a pose prediction network. The pose parameters as scale, two rotation angles
+    around axis and translation are defined following FS-Net with additional shape encoding from CPS++.  Afterwards the
+    normalized object shape is predicted from the shape encoding by a pretrained frozen shape decoder. The final object shape is
+    recovered from the normalized object shapes, scales and poses with a differentiable renderer to calculate implicit self-supervision losses
+                    including mask loss, contact loss and normal loss.
+                </p>
+            </div>
+        </div>
 
 
         <div class="row">
